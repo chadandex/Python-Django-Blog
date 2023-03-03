@@ -58,7 +58,11 @@
         </div>
         <div class="col-md-4">
           <div class="content-section">
-            <h3>Welcome, {{ user.username }}!</h3>
+            {% if user.is_authenticated %}
+                <h3>Welcome, {{ user.username }}!</h3>
+            {% else %}
+                <h3>Welcome to An Blog!</h3>
+            {% endif %}
             <p class='text-muted'>Enjoy your stay
               <ul class="list-group">
                 <li class="list-group-item list-group-item-light">Latest Posts</li>
