@@ -24,7 +24,7 @@ class PostListView(ListView):
 
 class UserPostListView(ListView):
     # -= User Selected Posts =-
-    # home.html
+    # user_posts.html
     model = Post
     template_name = 'blog/user_posts.html'
     context_object_name = 'posts'
